@@ -1,0 +1,283 @@
+:root{
+  --primary-color: #4A90E2; /* Deeper, vibrant blue */
+  --secondary-color: #E27E4A; /* Warm, inviting orange */
+  --text-primary: #1F2D5D; /* Darker blue for primary text */
+  --text-muted: #5C6F7E; /* Softer, sophisticated gray for secondary text */
+  --bg-light: #F9F9F9;    /* Very light, off-white background */
+  --bg-dark: #FFFFFF;    /* White background for cards/sections */
+  --border-color: #E6E6E6; /* Light gray for borders */
+}
+
+.heroWrap{
+  background: var(--bg-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 1rem; /* More vertical padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; /* Ensure content is above background effects */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row; /* Side-by-side on larger screens */
+    padding: 6rem 1rem;
+  }
+}
+
+.heroInner{
+  flex: 1;
+  text-align: center; /* Center text on mobile */
+}
+
+@media (min-width: 768px) {
+  .heroInner {
+    text-align: left; /* Align text left on larger screens */
+  }
+}
+
+.title{
+  font-size: 3rem; /* Larger title */
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.1;
+  font-family: 'Georgia', serif; /* Serif font for title */
+}
+
+.subtitle{
+  margin-top: 1rem; /* More space */
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+.ctas{
+  margin-top: 2rem; /* More space */
+  display: flex;
+  flex-direction: column; /* Stack buttons on mobile */
+  gap: 1rem;
+  justify-content: center; /* Center buttons on mobile */
+}
+
+@media (min-width: 768px) {
+  .ctas {
+    flex-direction: row; /* Side-by-side on larger screens */
+    justify-content: flex-start;
+  }
+}
+
+.btnPrimary, .btnOutline{
+  padding: 0.8rem 1.8rem; /* Larger buttons */
+  border-radius: 8px; /* More rounded corners */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 1.1rem;
+  display: inline-block; /* Ensure padding works */
+}
+
+.btnPrimary{
+  background: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
+}
+
+.btnPrimary:hover{
+  background: darken(var(--primary-color), 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btnOutline{
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+}
+
+.btnOutline:hover{
+  background: var(--primary-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.heroImage{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+/* Add a subtle overlay or pattern to the hero image container */
+.heroImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  z-index: 1;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem; /* More padding for all containers */
+}
+
+.about{
+  background: var(--bg-dark);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.about h2, .programsSection h2, .researchSection h2, .timelineSection h2, .admissions h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-family: 'Georgia', serif;
+  position: relative;
+  display: inline-block;
+}
+
+.about h2::after, .programsSection h2::after, .researchSection h2::after, .timelineSection h2::after, .admissions h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+}
+
+.about p{
+  color: var(--text-muted);
+  max-width: 80ch; /* Wider for better flow */
+  margin: 1.5rem auto; /* Center text */
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.link{
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--secondary-color);
+}
+
+.programsSection, .researchSection {
+  padding: 4rem 0;
+  background: var(--bg-light);
+}
+
+.programsGrid, .researchGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Larger cards */
+  gap: 2rem; /* More space between cards */
+  margin-top: 2rem;
+}
+
+.timelineSection {
+  padding: 4rem 0;
+  background: var(--bg-dark);
+  text-align: center;
+}
+
+.timeline{
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+  max-width: 700px;
+  text-align: left;
+}
+
+.timeline li {
+  padding: 1rem 0;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  border: 3px solid var(--bg-dark);
+}
+
+.timeline li strong {
+  color: var(--primary-color);
+}
+
+.admissions{
+  background: var(--primary-color); /* Stronger background for admissions */
+  padding: 4rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.admissions h2 {
+  color: #fff;
+}
+
+.admissions h2::after {
+  background-color: var(--secondary-color);
+}
+
+.admissions p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.admissions .ctas {
+  justify-content: center;
+}
+
+.admissions .btnPrimary {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.admissions .btnPrimary:hover {
+  background: darken(var(--secondary-color), 10%);
+  border-color: darken(var(--secondary-color), 10%);
+}
+
+.admissions .btnOutline {
+  border-color: #fff;
+  color: #fff;
+}
+
+.admissions .btnOutline:hover {
+  background: #fff;
+  color: var(--primary-color);
+}

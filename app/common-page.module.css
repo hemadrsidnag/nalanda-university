@@ -1,0 +1,81 @@
+.pageContainer {
+  padding: 4rem 1.5rem; /* Increased padding */
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--bg-light); /* Consistent background */
+  border-radius: 12px; /* Soft rounded corners */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtle shadow */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.pageContainer h1 {
+  font-family: var(--font-merriweather);
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.pageContainer p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.contactForm {
+  display: grid;
+  gap: 1rem; /* More space between form elements */
+  margin-top: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2); /* Soft focus ring */
+}
+
+.contactForm button {
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contactForm button:hover {
+  background: darken(var(--primary-color), 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contactInfo a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contactInfo a:hover {
+  color: var(--secondary-color);
+}

@@ -1,0 +1,39 @@
+.card{
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem; /* More padding */
+  border-radius: 12px; /* Softer rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h4{
+  margin: 0 0 0.75rem 0;
+  color: var(--text-primary);
+  font-family: var(--font-merriweather);
+  font-size: 1.25rem; /* Slightly smaller for news cards */
+}
+
+.card p{
+  margin: 0 0 1.2rem 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card a{
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: var(--secondary-color);
+}

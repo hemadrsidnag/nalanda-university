@@ -1,0 +1,19 @@
+html,body{
+  margin:0;
+  padding:0;
+  font-family: 'Open Sans', Inter, system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial, sans-serif; /* A clear sans-serif for body */
+  color: var(--text-primary); /* Use new primary text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', Georgia, serif; /* A classic serif for headings */
+}
+*{box-sizing:border-box}
+main{min-height:60vh}
+
+a{color:inherit}
+
+input,textarea,button{font:inherit}
+
+/* simple responsive image placeholder styling */
+img{max-width:100%;height:auto}
