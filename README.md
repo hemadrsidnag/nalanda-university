@@ -18,9 +18,9 @@ This project is a modern, responsive website for Nalanda University, built using
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **TypeScript**: Superset of JavaScript that adds static types.
 
-## Getting Started
+## Development Setup (For Contributors)
 
-Follow these instructions to set up and run the project locally.
+These instructions are for developers who wish to set up and run the project locally for development or contribution.
 
 ### Prerequisites
 
@@ -40,34 +40,15 @@ Make sure you have Node.js (version 18 or higher) and npm installed on your syst
    ```bash
    npm install
    ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser. The page will hot-reload as you make changes.
 
-### Running the Development Server
+## Deployment
 
-To start the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application. The page will hot-reload as you make changes.
-
-### Building for Production
-
-To build the application for production:
-
-```bash
-npm run build
-```
-
-This will create an optimized production build in the `.next` directory.
-
-### Starting the Production Server
-
-To start the production server after building:
-
-```bash
-npm run start
-```
+This website is designed to be deployed on Vercel.
 
 ## Learn More
 
