@@ -15,15 +15,30 @@
 }
 
 .hero {
+  background-image: url('/images/BuddhaRadiate.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column; /* Stack on mobile */
   gap: 2rem;
   align-items: center;
   padding: 4rem 1rem; /* More vertical padding */
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
   position: relative;
   z-index: 2; /* Ensure content is above background effects */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row; /* Side-by-side on larger screens */
+    padding: 6rem 1rem;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
 }
 
 @media (min-width: 768px) {

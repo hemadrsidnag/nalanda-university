@@ -65,11 +65,10 @@ export default function Home() {
     <div className={styles.heroWrap}>
       <section className={`${styles.hero}`} ref={heroRef}>
         <div className={styles.heroInner}>
-          <h1 className={styles.title}>Nalanda University</h1>
+          <h1 className={styles.title}>Nalanda</h1>
           <p className={styles.subtitle}>Reviving an ancient tradition of learning for a modern world.</p>
           <div className={styles.ctas}>
             <a className={styles.btnPrimary} href="/programs">Explore Programs</a>
-            <a className={styles.btnOutline} href="/contact">Contact Admissions</a>
           </div>
         </div>
         <div className={styles.heroImage}>
